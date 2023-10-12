@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sedona</title>
+  <meta name="description" content="Седона - место сказочной красоты"/>
+	<meta name="keywords" content="Седона, sedona, путешевствия, каньон" />
+	<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logoContainer">
+      <img class="logo" src="assets/img/logo.svg" alt="Logo">
+    </div>
+    <div class="menuBarConteiner">
+      <ul class="menu">
+        <li class="selected"><a href="index.html">Главная</a></li>
+        <li><a href="#">О Седоне</a></li>
+        <li><a href="#">Гостиницы</a></li>
+      </ul>
+    </div> 
+    <div class="castomMenuContainer">
+      <div class="menuElements">
+        <div class="buttonSearch">
+          <img class="search" src="assets/img/icon_search.png" alt="Search">
+        </div>
+        <div class="likeContainer">
+          <div class="likeButtonContainer">
+            <img id="likeButton" src="assets/img/icon_heart.png" alt="Like" />
+            <img id="likedButton" src="assets/img/icon_heart_liked.png" alt="Like">
+            <div id="likeCounter">12</div>
+          </div>
+        </div>
+        <script src="myScript.js"></script>
+        <div class="buttonContainer">
+          <a href="#"><button id="myButton">ХОЧУ СЮДА!</button></a>
+        </div>
+      </div>  
+    </div>  
+  </div>
+  <div class="siteContent">
+    <div class="mainScreen">
+      <div class="backgroundImgContainer">
+        <div class="offerContainer">
+          <h1 class="visuallyHidden">Седона - место сказочного каньона</h1>
+          <div class="welcomContainer">
+            <img class="welcom" src="assets/img/Welcome.png" alt="You welcom">
+            <img class="welcomToThe" src="assets/img/to_the_gorgeous.png" alt="To the gorgeous">
+          </div>
+          <div class="sedonaContainer">
+            <img class="sedona" src="assets/img/Sedona.png" alt="SEDONA - гранд каньон сосед!">
+          </div>
+        </div>
+      </div>
+    <div class="mainOffer">
+      <h2 class="aboutSedona">СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h2>
+      <p class="versusTitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>  
+    </div>
+    <div class="content">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
-  </body>
+    </div>
+  </div>
+</body>
 </html>
