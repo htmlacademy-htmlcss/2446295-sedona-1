@@ -19,7 +19,7 @@ body {
     background-color: #f0f0f0;
 }
 
-.header {
+header {
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -148,7 +148,7 @@ body {
     background-color: #81B3D3; 
 }
 
-.siteContent {
+main {
     margin-top: 0px;
     margin-right: auto;
     margin-left: auto;
@@ -217,7 +217,7 @@ body {
     display: none;
 }
 
-.mainOffer {
+.offer {
     margin-top: 0px;
     display: flex;
     flex-direction: column;
@@ -226,7 +226,7 @@ body {
     width: 1200px;
 }
 
-.aboutSedona {
+.offerSedona {
     margin-top: 70px;
     font-size: 30px;
     width: 620px;
@@ -234,7 +234,7 @@ body {
     margin-bottom: 0px;
 }
 
-.versusTitle {
+.offerTitle {
     margin-top: 25px;
     font-size: 22px;
     height: 25px;
