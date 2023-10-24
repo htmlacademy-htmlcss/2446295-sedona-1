@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'ptSansBold';
+    src: url('/2446295-sedona-1/fonts/ptsans-700.woff2') format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'ptSansBoldNormal';
+    src: url('/2446295-sedona-1/fonts/ptsans-400.woff2') format('woff2');
+    font-weight: normal;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.logoContainer {
+    margin-left: 70px;
+    margin-right: 45px;
+}
+
+.menuBarConteiner {
+    margin-right: auto;
+}
+
+.menu {
+    font-size: 20;
+    font-family: 'ptSansBold', 'sans-serif';
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.castomMenuContainer{
+    margin-right:70px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.menuElements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+.likeButtonContainer {
+    height: 55px;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonSearch, .likeContainer, .likeButtonContainer {
+    display: flex;
+    width: 45px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search, #likeButton, #likedButton {
+    width: 20px;
+    height: 20px;
+}
+
+.search {
+    cursor: pointer;
+}
+
+.likeContainer {
+    position: relative;
+}
+
+#likeButton {
+    cursor: pointer;
+    
+}
+
+#likedButton {
+    display: none;
+    
+}
+
+#likeCounter {
+    z-index: 1;
+    background-color: #7DB54F;
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    right: 3px;
+    top: 7px;
+    margin: 0;
+}
+
+.buttonContainer {
+    margin-right: 0px;
+}
+
+#myButton {
+    background-color: #756157;
+    margin-left: 25px;
+    width: 160px;
+    height: 35px;
+    color: white;
+    font-family: 'ptSansBold', sans-serif;
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+#myButton:hover {
+    background-color: #81B3D3; 
+}
+
+main {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.backgroundImgContainer {
+    width: 100%;
+    height: 485px;
+    position: relative;
+    overflow: hidden;  
+}
+
+.backgroundImgContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 485px;
+    background-image: url('/2446295-sedona-1/assets/img/background_img.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+.backgroundImgContainer::after {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 57px; 
+    background-image: url('/2446295-sedona-1/assets/img/transition_line.png');
+    background-size: cover;
+    z-index: -1;
+    background-position: center bottom; 
+}
+
+.welcomContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcom {
+    margin-top: 50px;
+}
+
+.welcomToThe {
+    margin-top: 10px;
+}
+
+.sedona {
+    margin-top: 55px;
+}
+
+.transitinoLine {
+    margin-bottom: 40px;
+}
+
+.visuallyHidden {
+    display: none;
+}
+
+.offer {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 260px;
+    width: 1200px;
+}
+
+.offerSedona {
+    margin-top: 70px;
+    font-size: 30px;
+    width: 620px;
+    font-family: 'ptSansBold', sans-serif;
+    margin-bottom: 0px;
+}
+
+.offerTitle {
+    margin-top: 25px;
+    font-size: 22px;
+    height: 25px;
+    width: 700px;
+    font-family: 'ptSansNormal', sans-serif;
+}
