@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'PT Sans';
-  src: url('/2446295-sedona-1/fonts/ptsans-700.woff2') format('woff2');
+  src: url('/fonts/ptsans-700.woff2') format('woff2');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -8,16 +8,33 @@
 
 @font-face {
   font-family: 'PT Sans';
-  src: url('/2446295-sedona-1/fonts/ptsans-400.woff2') format('woff2');
+  src: url('/fonts/ptsans-400.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
+h3 {
+  margin: 0;
+  font: 700 24px/28px 'PT Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+  font: 400 18px/21px 'PT Sans', sans-serif;
+  text-transform: initial;
+  color: rgba(51, 51, 51, 1);
+}
+
+ul {
+  list-style: none;
+}
+
 body {
   display: flex;
   margin: 0;
-  background-color: rgb(208, 245, 245);
+  background-color: rgb(255, 255, 255);
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -117,14 +134,13 @@ header {
   align-items: center;
 }
 
-.buttonLink {
+.button {
   display: flex;
   width: 120px;
   height: 30px;
   padding: 8px 50px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(117, 97, 87, 1);
-  padding: 8px 50px;
   border-radius: 4px;
   text-decoration: none;
   justify-content: center;
@@ -152,7 +168,7 @@ main {
 
 .backgroundImgContainer {
   display: flex;
-  background: rgba(227, 240, 248, 1) url("/2446295-sedona-1/img/background_img.jpg") no-repeat center;
+  background: rgba(227, 240, 248, 1) url("/img/background_img.jpg") no-repeat center;
   width: 1200px;
   height: 485px;
   justify-content: center;
@@ -165,7 +181,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/2446295-sedona-1/img/transition_line.png") no-repeat center bottom;
+    background: url("/img/transition_line.png") no-repeat center bottom;
   }
 }
 
@@ -225,5 +241,184 @@ main {
   width: 700px;
   font: 400 22px/26px 'PT Sans', sans-serif;
   text-transform: initial;
+  color: rgba(51, 51, 51, 1);
 }
 
+
+.content {
+  margin: auto;
+  margin-top: 21px;
+  padding-left: 0;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+
+.content li {
+  display: flex;
+  height: 385px;
+}
+
+.content hr {
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.30);
+}
+
+.withPictures {
+  width: 1200px;
+}
+
+.cardContent {
+  width: 230px;
+  margin: 103px 85px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.cardPictures1 {
+  width: 800px;
+  background: rgba(227, 240, 248, 1) url("/img/background_img_sedona.jpg") no-repeat center;
+  align-self: stretch;
+}
+
+.cardPictures2 {
+  width: 800px;
+  background: rgba(227, 240, 248, 1) url("/img/background_img_canyon.jpg") no-repeat center;
+  align-self: stretch;
+}
+
+.Advantages {
+  display: flex;
+  align-items: flex-start;
+  width: 1200px;
+  margin: 0;
+}
+
+.Advantages li {
+  display: flex;
+  width: 400px;
+  padding: 80px 85px;
+
+}
+
+.Advantages div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+
+}
+
+.Advantages img {
+ width: 72px;
+ height: 75px;
+}
+
+.question {
+  padding: 96px 0;
+}
+
+.question p{
+  width: 600px;
+}
+
+.offer a {
+  margin-top: 30px;
+  width: 276px;
+  font-size: 20px;
+  line-height: 36px;
+  padding: 8px 50px;
+}
+
+.subscribe {
+  display: flex;
+  margin: auto;
+  width: 1200px;
+  background: url("/img/background_img_subscribe.jpg") no-repeat center;
+  align-self: stretch;
+  padding: 96px 0 104px 0;
+  gap: 25px;
+}
+
+.subscribe h2 {
+  color: white;
+}
+
+.subscribe p {
+  color: white;
+}
+
+.subscribe form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 30px;
+  width: 700px;
+}
+
+.mail {
+  margin: 0;
+  height: 50px;
+  width: 450px;
+}
+
+.submit {
+  color: white;
+  background-color: rgba(130, 179, 211, 1);
+  width: 230px;
+  height: 50px;
+  border-radius: 0 4px 4px 0;
+}
+
+/*-----ФУТЕР-----*/
+footer {
+  display: flex;
+  width: 1200px;
+  height: 120px;
+  align-items: center;
+}
+
+/*--Социальные сети--*/
+.socialContainer {
+  display: flex;
+  margin-left: 70px ;
+  align-items: center;
+}
+
+.socialContainer a {
+  padding: 0 10px;
+}
+
+.tg img{
+  padding-top: 2px;
+}
+
+.yt img {
+  padding-top: 3px;
+  padding-left: 3px;
+}
+
+/*--Контакты--*/
+.tel {
+  margin: auto;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  font-family: PT Sans;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+/*--Логотип компании--*/
+.company {
+  margin-right: 70px;
+}

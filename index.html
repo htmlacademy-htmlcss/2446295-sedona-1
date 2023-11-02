@@ -19,7 +19,7 @@
     <ul class="menu">
       <li class="selected"><a href="index.html">Главная</a></li>
       <li><a href="#">О Седоне</a></li>
-      <li><a href="#">Гостиницы</a></li>
+      <li><a href="catalog.html">Гостиницы</a></li>
     </ul>
 
     <div class="menuElements">
@@ -35,7 +35,7 @@
       </div>
 
       <div class="buttonContainer">
-        <a class="buttonLink">Хочу сюда!</a>
+        <a class="button" href="#">Хочу сюда!</a>
       </div>
     </div>
   </header>
@@ -61,96 +61,126 @@
       <p class="offerTitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
     </div>
   </main>
-<!--я тут-->
-  <div class="content">
-    <div class="card1">
-      <p>Настоящий городок</p>
-      <hr>
-      <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-    </div>
 
-    <div class="cardPictures2"></div>
-    <div class="card3">
-      <p>Небольшая площадь</p>
-      <hr>
-      <p>Все достопримечательности находятся очень близко</p>
-    </div>
+  <ul class="content">
+    <li class="withPictures">
+      <div class="cardContent">
+        <h3>
+          Настоящий<br>
+          городок
+        </h3>
+        <hr>
+        <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+      </div>
+      <div class="cardPictures1"></div>
+    </li>
 
-    <div class="card4">
-      <p>Красивая дорога</p>
-      <hr>
-      <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-    </div>
+    <li>
+      <div class="cardContent">
+        <h3>
+          Небольшая<br>
+          площадь
+        </h3>
+        <hr>
+        <p>Все достопримечательности находятся очень близко</p>
+      </div>
+    </li>
 
-    <div class="card5">
-      <p>Мало туристов</p>
-      <hr>
-      <p>Большинство едет в Гранд Каньон и толпится там</p>
-    </div>
+    <li>
+      <div class="cardContent">
+        <h3>
+          Красивая<br>
+          дорога
+        </h3>
+        <hr>
+        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
+    </li>
 
-    <div class="cardPictures6"></div>
-    <div class="card7">
-      <p>Там есть мост дьявола</p>
-      <hr>
-      <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-    </div>
-  </div>
+    <li>
+      <div class="cardContent">
+        <h3>
+          Мало<br>
+          туристов
+        </h3>
+        <hr>
+        <p>Большинство едет в Гранд Каньон и толпится там</p>
+      </div>
+    </li>
+
+
+    <li class="withPictures">
+      <div class="cardPictures2"></div>
+      <div class="cardContent">
+        <h3>
+          Там есть<br>
+          мост дьявола
+        </h3>
+        <hr>
+        <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+      </div>
+    </li>
+  </ul>
 
   <div class="offer">
     <h2 class="offerSedona">Приезжайте в седону отдохнуть в комфорте и уюте!</h2>
     <p class="offerTitle">Опытный персонал и качественное обслуживание!</p>
   </div>
 
-  <aside>
-    <div class="homeCard">
-      <img class="home" src="img/Sedona.png" alt=Дом>
-      <p>МАЛО ТУРИСТОВ</p>
-      <p>Большинство едет в Гранд Каньон и толпится там</p>
-    </div>
+  <ul class="Advantages">
+    <li>
+      <div>
+        <img class="home" src="img/home_icon.svg" alt=Дом>
+        <h3>Жильё</h3>
+        <p>Рекомендуем пожитьв настоящем мотеле, всё как в кино!</p>
+      </div>
+    </li>
 
-    <div class="eatCard">
-      <img class="eat" src="img/Sedona.png" alt=Еда>
-      <p>МАЛО ТУРИСТОВ</p>
-      <p>Большинство едет в Гранд Каньон и толпится там</p>
-    </div>
+    <li>
+      <div>
+        <img class="eat" src="img/burger_icon.svg" alt=Еда>
+        <h3>Еда</h3>
+        <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+    </li>
 
-    <div class="souvenirsCard">
-      <img class="souvenirs" src="img/Sedona.png" alt=Сувениры>
-      <p>МАЛО ТУРИСТОВ</p>
-      <p>Большинство едет в Гранд Каньон и толпится там</p>
-    </div>
-  </aside>
+    <li>
+      <div>
+        <img class="souvenirs" src="img/present_icon.svg" alt=Сувениры>
+        <h3>Сувениры</h3>
+        <p>Не только китайского, но и настоящего местного производства</p>
+      </div>
+    </li>
+  </ul>
 
-  <div class="offer">
+  <div class="offer question">
     <h2 class="offerSedona">Заинтересовались?</h2>
-    <p class="offerTitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    <a href="#"><div class="asideButton"></div></a>
+    <p class="offerTitle">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+    <a class="button" href="#">Поиск гостиниц в Седоне</a>
   </div>
 
-  <div class="Subscribe">
+  <div class="offer subscribe">
     <h2 class="offerSedona">Подпишитесь на рассылку</h2>
-    <p class="offerTitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <p class="offerTitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
     <form>
-      <input type="text" value="Ваш e-mail">
-      <input type="submit" value="ПОДПИСАТЬСЯ">
+      <input class="mail" type="text" value="Ваш e-mail">
+      <input class="submit button" type="submit" value="Подписаться">
     </form>
   </div>
 
   <footer>
     <div class="socialContainer">
-      <a href="#"><img src="" alt=""></a>
-      <a href="#"><img src="" alt=""></a>
-      <a href="#"><img src="" alt=""></a>
+      <a class="vk" href="#"><img src="img/vk_icon.svg" alt="Вконтакте"></a>
+      <a class="tg" href="#"><img src="img/telegram_icon.svg" alt="Телеграм"></a>
+      <a class="yt" href="#"><img src="img/youtube_icon.svg" alt="Youtube"></a>
     </div>
 
-    <div class="contact">
-      <span>+ 7(812) 812-12-12</span>
-    </div>
+    <a class="tel" href="tel:+78128121212">+7(812) 812-12-12</a>
 
     <div class="company">
-      <a href="#"><img src="" alt=""></a>
+      <a href="#"><img src="img/company_icon.svg" alt="HTML Academy"></a>
     </div>
-
   </footer>
 </body>
+
 </html>
