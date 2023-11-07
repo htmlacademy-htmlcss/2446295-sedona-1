@@ -1,3 +1,8 @@
+
+*,*::after,*::before {
+  box-sizing: border-box;
+  }
+
 @font-face {
   font-family: 'PT Sans';
   src: url('/fonts/ptsans-700.woff2') format('woff2');
@@ -52,11 +57,11 @@ header {
   min-height: 65px;
 }
 
-.logoContainer{
+.logoContainer {
   position: relative;
   display: flex;
   margin: 0 20px auto 70px;
-  width: 80px;
+  width: 140px;
   height: 65px;
 }
 
@@ -64,8 +69,8 @@ header {
   position: absolute;
   width: 140px;
   height: 70px;
+  z-index: 1;
 }
-
 
 .menu {
   display: flex;
@@ -91,12 +96,11 @@ header {
   color: rgba(0, 0, 0, 1);
 }
 
-
 .menuElements {
   display: flex;
+  align-items: center;
   margin: auto 70px auto auto;
 }
-
 
 .buttonSearch {
   padding: 22px 12px;
@@ -128,7 +132,9 @@ header {
   line-height: 20px
 }
 
-.buttonContainer {
+.buttonWrapper{
+  width: 160px;
+  height: 36px;
   margin-left: 20px;
   display: flex;
   align-items: center;
@@ -136,9 +142,8 @@ header {
 
 .button {
   display: flex;
-  width: 120px;
-  height: 30px;
-  padding: 8px 50px;
+  width: 100%;
+  min-height: 36px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(117, 97, 87, 1);
   border-radius: 4px;
@@ -147,7 +152,7 @@ header {
   align-items: center;
   gap: 10px;
   font-family: PT Sans;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
@@ -203,7 +208,6 @@ main {
   gap: 15px;
 }
 
-
 .welcom{
   max-width: 190px;
   max-height: 45px;
@@ -244,10 +248,8 @@ main {
   color: rgba(51, 51, 51, 1);
 }
 
-
 .content {
-  margin: auto;
-  margin-top: 21px;
+  margin: 0;
   padding-left: 0;
   width: 1200px;
   display: flex;
@@ -255,16 +257,36 @@ main {
   align-items: flex-start;
 }
 
-
 .content li {
   display: flex;
   height: 385px;
 }
 
-.content hr {
+.content li:nth-child(4n+1) {
+  background-color: rgba(130, 179, 211, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.content li:nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.content li:nth-child(4n-1) {
+  background-color: rgba(131, 179, 211, 0.20);
+}
+
+.cardContent hr {
   width: 60px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.30);
+  background-color: rgba(255, 255, 255, 0.30);
+  margin-block-start: 0;
+  margin-block-end: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.cardContent hr:nth-child(4n+1) {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .withPictures {
@@ -292,21 +314,25 @@ main {
   align-self: stretch;
 }
 
-.Advantages {
+.advantages {
   display: flex;
   align-items: flex-start;
   width: 1200px;
   margin: 0;
+  padding: 0;
 }
 
-.Advantages li {
+.advantages div {
   display: flex;
   width: 400px;
   padding: 80px 85px;
-
 }
 
-.Advantages div {
+.advantages li:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages div {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -315,65 +341,88 @@ main {
 
 }
 
-.Advantages img {
+.advantages img {
  width: 72px;
  height: 75px;
 }
 
 .question {
-  padding: 96px 0;
+  padding: inherit;
+  gap: 20;
 }
 
-.question p{
-  width: 600px;
+.question .offerTitle {
+  margin-bottom: 34px;
 }
 
-.offer a {
-  margin-top: 30px;
-  width: 276px;
+.question .buttonWrapper {
+ min-width: 376px;
+ min-height: 52px;
+ margin: 0;
+}
+
+.question .button {
+  height: 100%;
+  width: 100%;
   font-size: 20px;
   line-height: 36px;
-  padding: 8px 50px;
+
 }
 
 .subscribe {
-  display: flex;
-  margin: auto;
-  width: 1200px;
   background: url("/img/background_img_subscribe.jpg") no-repeat center;
-  align-self: stretch;
-  padding: 96px 0 104px 0;
-  gap: 25px;
+  gap: 20px;
 }
 
-.subscribe h2 {
+.subscribe .offerSedona {
   color: white;
 }
 
-.subscribe p {
+.subscribe .offerTitle {
   color: white;
+  margin-bottom: 34px;
 }
 
 .subscribe form {
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-top: 30px;
   width: 700px;
+  min-height: 52px;
 }
 
-.mail {
+.input {
   margin: 0;
-  height: 50px;
+  min-height: inherit;
   width: 450px;
+  border: none;
+  padding: 0;
 }
 
 .submit {
-  color: white;
   background-color: rgba(130, 179, 211, 1);
   width: 230px;
-  height: 50px;
+  min-height: inherit;
   border-radius: 0 4px 4px 0;
+  border: none;
+}
+
+input[type="submit"] {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+input[type="text"] {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px 0 0 4px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 /*-----ФУТЕР-----*/
