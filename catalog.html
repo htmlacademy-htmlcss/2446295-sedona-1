@@ -4,22 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sedona</title>
-  <meta name="description" content="Седона - место сказочной красоты"/>
-	<meta name="keywords" content="Седона, sedona, путешевствия, каньон" />
-	<link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="fonts.css">
+  <meta name="description" content="Каталог отелей"/>
+	<meta name="keywords" content="Отели, отель, Седона, отдых" />
+	<link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-  <header>
-    <div class="logoContainer">
+  <header class="header">
+    <div class="logoWrapper">
       <img class="logo" src="img/logo.svg" alt="Логотип Седона">
     </div>
 
     <ul class="menu">
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">О Седоне</a></li>
-      <li class="selected"><a href="catalog.html">Гостиницы</a></li>
+      <li class="active"><a href="catalog.html">Гостиницы</a></li>
     </ul>
 
     <div class="menuElements">
@@ -27,42 +26,112 @@
         <img class="search" src="img/icon_search.png" alt="Поиск">
        </div>
 
-      <div class="likeContainer">
-         <div class="likeButtonContainer">
-            <img class="likeButton" src="img/icon_heart.png" alt="Нравится" />
+      <div class="likeWrapper">
+         <div class="likeButtonWrapper">
+            <img class="likeButton" src="img/icon_heart.png" alt="Нравится">
             <span class="likeCounter">12</span>
         </div>
       </div>
 
-      <div class="buttonContainer">
+      <div class="buttonWrapper">
         <a class="button" href="#">Хочу сюда!</a>
       </div>
     </div>
   </header>
 
+  <main>
+    <section class="filterWrapper">
+      <div class="filterHeader">
+        <h1>Гостиницы Седоны</h1>
+        <div class="breadcrubs">
+          <div class="breadcrubsHomeIcon">
+            <img class="homeCatalogIcon" src="img/home_catalog_icon.svg" alt="переход на главную страница">
+          </div>
+          <div class="breadcrubsArrowIcon">
+            <img class="arrowCatalogIcon" src="img/arrow_icon.svg" alt="Текущая страница:">
+            <span>Гостиницы</span>
+          </div>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="infra">
+          <span>Инфраструктура:</span>
+          <ul class="controlInfra">
+            <li>
+              <input class="infraImput" type="checkbox" name="Бассейн" checked>
+              Бассейн
+            </li>
+            <li>
+              <input class="infraImput" type="checkbox" name="Парковка" checked>
+              Парковка
+            </li>
+            <li>
+              <input class="infraImput" type="checkbox" name="Wi-Fi">
+              Wi-Fi
+            </li>
+          </ul>
+        </div>
+        <div class="typeHouse">
+          <span>Тип жилья:</span>
+          <ul class="controlTypeHouse">
+            <li>
+              <input class="typeHouseImput" type="radio" name="Гостиница" checked>
+              Гостиница
+            </li>
+            <li>
+              <input class="typeHouseImput" type="radio" name="Мотель">
+              Мотель
+            </li>
+            <li>
+              <input class="typeHouseImput" type="radio" name="Апартаменты">
+              Апартаменты
+            </li>
+          </ul>
+        </div>
+        <div class="priceWrapper">
+          <span>Стоимость,₽:</span>
+          <div class="rangeInput">
+            <input class="fromInput" type="number" value="0" placeholder="от">
+            <input class="toInput" type="number" value="9000" placeholder="до">
+            <div class="sliderWrapper">
+              <img class="sliderFrom" src="img/slider.png" alt="Ползунок цены от">
+              <img class="sliderLineActive" src="img/slider_line_active.png" alt="Выбранный диапазон цен">
+              <img class="sliderLine" src="img/slider_line_full.png" alt="Диапазон цен">
+              <img class="sliderTo" src="img/slider.png" alt="Ползунок цены до">
+            </div>
+          </div>
+        </div>
+        <div class="filterButtonWrapper">
+          <a class="button buttonApply" href="#">Применить</a>
+          <a class="button buttonReset" href="#">Сбросить</a>
+        </div>
+      </div>
+    </section>
 
-
-  <div class="offer subscribe">
-    <h2 class="offerSedona">Подпишитесь на рассылку</h2>
-    <p class="offerTitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-    <form>
-      <input class="mail" type="text" value="Ваш e-mail">
-      <input class="submit button" type="submit" value="Подписаться">
-    </form>
-  </div>
+    <section class="offer subscribe catalogPage">
+      <div class="subscribeWrapper">
+        <h2 class="offerSedona">Подпишитесь на рассылку</h2>
+        <p class="offerTitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+        <form>
+          <input class="input" type="email" placeholder="Ваш e-mail">
+          <input class="submit button" type="submit" value="Подписаться">
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="socialContainer">
+    <section class="socialWrapper">
       <a class="vk" href="#"><img src="img/vk_icon.svg" alt="Вконтакте"></a>
       <a class="tg" href="#"><img src="img/telegram_icon.svg" alt="Телеграм"></a>
       <a class="yt" href="#"><img src="img/youtube_icon.svg" alt="Youtube"></a>
-    </div>
+    </section>
 
     <a class="tel" href="tel:+78128121212">+7(812) 812-12-12</a>
 
-    <div class="company">
+    <section class="company">
       <a href="#"><img src="img/company_icon.svg" alt="HTML Academy"></a>
-    </div>
+    </section>
   </footer>
 </body>
 

@@ -19,23 +19,6 @@
   font-display: swap;
 }
 
-h3 {
-  margin: 0;
-  font: 700 24px/28px 'PT Sans', sans-serif;
-  text-transform: uppercase;
-}
-
-p {
-  margin: 0;
-  font: 400 18px/21px 'PT Sans', sans-serif;
-  text-transform: initial;
-  color: rgba(51, 51, 51, 1);
-}
-
-ul {
-  list-style: none;
-}
-
 body {
   display: flex;
   margin: 0;
@@ -44,11 +27,19 @@ body {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
+  font-family: 'PT Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+body ul {
+  list-style: none;
 }
 
 /* Шапка */
 
-header {
+.header {
   display: flex;
   width: 1200px;
   justify-content: space-between;
@@ -83,9 +74,7 @@ header {
 
 .menu li {
   padding: 20px 16px 20px 16px;
-  font-family: PT Sans;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
@@ -104,6 +93,7 @@ header {
 
 .buttonSearch {
   padding: 22px 12px;
+  line-height: 0;
 }
 
 .likeWrapper {
@@ -125,10 +115,7 @@ header {
   height: 20px;
   border-radius: 10px;
   text-align: center;
-  font-family: PT Sans;
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 10px;
   line-height: 20px
 }
 
@@ -151,9 +138,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-family: PT Sans;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
@@ -171,9 +156,9 @@ main {
   position: absolute;
 }
 
-.backgroundImgWrapper {
+.intro {
   display: flex;
-  background: rgba(227, 240, 248, 1) url("/img/background_img.jpg") no-repeat center;
+  background: rgb(164, 213, 243) url("/img/background_img.jpg") no-repeat center;
   width: 1200px;
   height: 485px;
   justify-content: center;
@@ -182,7 +167,7 @@ main {
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1;
     left: 0;
     width: 100%;
     height: 100%;
@@ -236,56 +221,74 @@ main {
 .offer h2 {
   margin: 0;
   width: 700px;
-  font: 700 30px/36px 'PT Sans', sans-serif;
+  font-size: 30px;
+  line-height: 36px;
   text-transform: uppercase;
 }
 
 .offer p {
   margin: 0;
   width: 700px;
-  font: 400 22px/26px 'PT Sans', sans-serif;
+  font-size: 22px;
+  line-height: 26px;
   text-transform: initial;
   color: rgba(51, 51, 51, 1);
 }
 
-.content {
+.list {
   margin: 0;
   padding-left: 0;
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-bottom: 64px;
 }
 
-.content li {
+.list p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: initial;
+}
+
+.list li {
   display: flex;
   height: 385px;
 }
 
-.content li:nth-child(4n+1) {
+.list h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  font-family: 'PT Sans';
+  text-transform: uppercase;
+}
+
+.list li:nth-child(4n+1) {
   background-color: rgba(130, 179, 211, 1);
   color: rgba(255, 255, 255, 1);
 }
 
-.content li:nth-child(2n) {
+.list li:nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.content li:nth-child(4n-1) {
-  background-color: rgba(131, 179, 211, 0.20);
+.list li:nth-child(4n-1) {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
-.cardContent hr {
+.cardList hr {
   width: 60px;
-  background-color: rgba(255, 255, 255, 0.30);
+  border-color: rgba(0, 0, 0, 0.3);
   margin-block-start: 0;
   margin-block-end: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.3);
 }
 
-.cardContent hr:nth-child(4n+1) {
+.list li:nth-child(4n+1) hr {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -293,7 +296,7 @@ main {
   width: 1200px;
 }
 
-.cardContent {
+.cardList {
   width: 230px;
   margin: 103px 85px;
   display: flex;
@@ -302,30 +305,31 @@ main {
   gap: 30px;
 }
 
-.cardPictures1 {
+.sedonaImg {
   width: 800px;
   background: rgba(227, 240, 248, 1) url("/img/background_img_sedona.jpg") no-repeat center;
   align-self: stretch;
 }
 
-.cardPictures2 {
+.canyonImg {
   width: 800px;
   background: rgba(227, 240, 248, 1) url("/img/background_img_canyon.jpg") no-repeat center;
   align-self: stretch;
+}
+
+.actionOffer {
+  padding: 0;
+  margin-bottom: 64px;
+  gap: 20px;
 }
 
 .advantages {
   display: flex;
   align-items: flex-start;
   width: 1200px;
-  margin: 0;
   padding: 0;
-}
-
-.advantages div {
-  display: flex;
-  width: 400px;
-  padding: 80px 85px;
+  margin: 0;
+  margin-bottom: 96px;
 }
 
 .advantages li:nth-child(odd) {
@@ -333,12 +337,16 @@ main {
 }
 
 .advantages div {
+  width: 400px;
+  padding: 80px 85px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   gap: 30px;
-
+}
+.advantages p, h3 {
+  margin: 0;
 }
 
 .advantages img {
@@ -349,6 +357,7 @@ main {
 .question {
   padding: inherit;
   gap: 20;
+  margin-bottom: 96px;
 }
 
 .question .offerTitle {
@@ -366,11 +375,16 @@ main {
   width: 100%;
   font-size: 20px;
   line-height: 36px;
-
 }
-
+/*--Подпишитесь на рассылку--*/
 .subscribe {
   background: url("/img/background_img_subscribe.jpg") no-repeat center;
+  padding: 96px 258px 104px 258px;
+}
+
+.subscribeWrapper {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -399,6 +413,15 @@ main {
   padding: 0;
 }
 
+input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'PT Sans';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 .submit {
   background-color: rgba(130, 179, 211, 1);
   width: 230px;
@@ -413,7 +436,7 @@ input[type="submit"] {
   line-height: 36px;
 }
 
-input[type="text"] {
+input[type="email"] {
   display: flex;
   padding: 0 20px;
   align-items: center;
@@ -434,23 +457,24 @@ footer {
 }
 
 /*--Социальные сети--*/
-.socialContainer {
+.socialWrapper {
   display: flex;
   margin-left: 70px ;
-  align-items: center;
 }
 
 .socialWrapper a {
   padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tg img{
-  padding-top: 2px;
+.tg img {
+  padding-top: 1px;
 }
 
 .yt img {
-  padding-top: 3px;
-  padding-left: 3px;
+  padding-top: 2px;
 }
 
 /*--Контакты--*/
@@ -470,4 +494,68 @@ footer {
 /*--Логотип компании--*/
 .company {
   margin-right: 70px;
+}
+
+/*--КАТАЛОГ--*/
+
+.filterWrapper {
+  display: flex;
+  width: 1200px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 35px 70px 70px 70px;
+  background: rgba(164, 213, 243, 1) url(/img/background_catalog_img.jpg) no-repeat;
+  color: rgba(255, 255, 255, 1);
+  gap: 40px;
+}
+
+.filterWrapper h1 {
+  font-size: 60px;
+  line-height: 78px;
+  margin: 0;
+}
+
+.filterHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.breadcrubs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.breadcrubsArrowIcon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.breadcrubs span{
+  line-height: 21px;
+}
+
+
+/*--Подпишитесь на рассылку--*/
+.catalogPage {
+  background: rgba(255, 255, 255, 1);
+}
+
+.catalogPage .offerSedona {
+  color: inherit;
+}
+
+.catalogPage .offerTitle {
+  color: inherit;
+}
+
+.catalogPage input[type="email"] {
+  background-color: rgba(242, 242, 242, 1);
 }

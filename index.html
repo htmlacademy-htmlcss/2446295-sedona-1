@@ -6,18 +6,17 @@
   <title>Sedona</title>
   <meta name="description" content="Седона - место сказочной красоты"/>
 	<meta name="keywords" content="Седона, sedona, путешевствия, каньон" />
-	<link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="fonts.css">
+	<link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="logoWrapper">
       <img class="logo" src="img/logo.svg" alt="Логотип Седона">
     </div>
 
     <ul class="menu">
-      <li class="selected"><a href="index.html">Главная</a></li>
+      <li class="active"><a href="index.html">Главная</a></li>
       <li><a href="#">О Седоне</a></li>
       <li><a href="catalog.html">Гостиницы</a></li>
     </ul>
@@ -41,7 +40,7 @@
   </header>
 
   <main>
-    <div class="backgroundImgWrapper">
+    <section class="intro">
        <div class="offerWrapper">
         <h1 class="visuallyHidden">Седона - место сказочного каньона</h1>
 
@@ -54,134 +53,141 @@
           <img class="sedona" src="img/Sedona.png" alt="Седона - гранд каньон сосед!">
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="offer">
-      <h2 class="offerSedona">Седона — небольшой годорок в аризоне, заслуживающий большего</h2>
-      <p class="offerTitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-    </div>
+    <section>
+      <div class="offer">
+        <h2 class="offerSedona">Седона — небольшой годорок в аризоне, заслуживающий большего</h2>
+        <p class="offerTitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </div>
+      <h2 class="visuallyHidden">Живописные места с малым количеством туристов!</h2>
+      <ul class="list">
+      <li class="withPictures">
+        <div class="cardList">
+          <h3>
+            Настоящий<br>
+            городок
+          </h3>
+          <hr>
+          <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <div class="sedonaImg"></div>
+      </li>
+
+      <li>
+        <div class="cardList">
+          <h3>
+            Небольшая<br>
+            площадь
+          </h3>
+          <hr>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+      </li>
+
+      <li>
+        <div class="cardList">
+          <h3>
+            Красивая<br>
+            дорога
+          </h3>
+          <hr>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+      </li>
+
+      <li>
+        <div class="cardList">
+          <h3>
+            Мало<br>
+            туристов
+          </h3>
+          <hr>
+          <p>Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </li>
+
+
+      <li class="withPictures">
+        <div class="canyonImg"></div>
+        <div class="cardList">
+          <h3>
+            Там есть<br>
+           мост дьявола
+          </h3>
+          <hr>
+          <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+        </div>
+      </li>
+      </ul>
+    </section>
+
+    <section class="offer actionOffer">
+      <h2 class="offerSedona">Приезжайте в седону отдохнуть<br> в комфорте и уюте!</h2>
+      <p class="offerTitle">Опытный персонал и качественное обслуживание!</p>
+    </section>
+
+    <section>
+      <ul class="advantages">
+      <li>
+        <div>
+          <img class="home" src="img/home_icon.svg" alt="Дом">
+          <h3>Жильё</h3>
+          <p>Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <img class="eat" src="img/burger_icon.svg" alt="Еда">
+          <h3>Еда</h3>
+          <p>Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <img class="souvenirs" src="img/present_icon.svg" alt="Сувениры">
+          <h3>Сувениры</h3>
+          <p>Не только китайского,<br> но и настоящего местного производства</p>
+        </div>
+      </li>
+      </ul>
+    </section>
+
+    <section class="offer question">
+      <h2 class="offerSedona">Заинтересовались?</h2>
+      <p class="offerTitle">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+
+      <div class="buttonWrapper">
+        <a class="button" href="#">Поиск гостиниц в Седоне</a>
+      </div>
+    </section>
+
+    <section class="offer subscribe">
+      <div class="subscribeWrapper">
+        <h2 class="offerSedona">Подпишитесь на рассылку</h2>
+        <p class="offerTitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+        <form>
+          <input class="input" type="email" placeholder="Ваш e-mail">
+          <input class="submit button" type="submit" value="Подписаться">
+        </form>
+      </div>
+    </section>
   </main>
 
-  <ul class="content">
-    <li class="withPictures">
-      <div class="cardContent">
-        <h3>
-          Настоящий<br>
-          городок
-        </h3>
-        <hr>
-        <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-      </div>
-      <div class="cardPictures1"></div>
-    </li>
-
-    <li>
-      <div class="cardContent">
-        <h3>
-          Небольшая<br>
-          площадь
-        </h3>
-        <hr>
-        <p>Все достопримечательности находятся очень близко</p>
-      </div>
-    </li>
-
-    <li>
-      <div class="cardContent">
-        <h3>
-          Красивая<br>
-          дорога
-        </h3>
-        <hr>
-        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      </div>
-    </li>
-
-    <li>
-      <div class="cardContent">
-        <h3>
-          Мало<br>
-          туристов
-        </h3>
-        <hr>
-        <p>Большинство едет в Гранд Каньон и толпится там</p>
-      </div>
-    </li>
-
-
-    <li class="withPictures">
-      <div class="cardPictures2"></div>
-      <div class="cardContent">
-        <h3>
-          Там есть<br>
-          мост дьявола
-        </h3>
-        <hr>
-        <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-      </div>
-    </li>
-  </ul>
-
-  <div class="offer">
-    <h2 class="offerSedona">Приезжайте в седону отдохнуть в комфорте и уюте!</h2>
-    <p class="offerTitle">Опытный персонал и качественное обслуживание!</p>
-  </div>
-
-  <ul class="advantages">
-    <li>
-      <div>
-        <img class="home" src="img/home_icon.svg" alt=Дом>
-        <h3>Жильё</h3>
-        <p>Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
-      </div>
-    </li>
-
-    <li>
-      <div>
-        <img class="eat" src="img/burger_icon.svg" alt=Еда>
-        <h3>Еда</h3>
-        <p>Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
-      </div>
-    </li>
-
-    <li>
-      <div>
-        <img class="souvenirs" src="img/present_icon.svg" alt=Сувениры>
-        <h3>Сувениры</h3>
-        <p>Не только китайского,<br> но и настоящего местного производства</p>
-      </div>
-    </li>
-  </ul>
-
-  <div class="offer question">
-    <h2 class="offerSedona">Заинтересовались?</h2>
-    <p class="offerTitle">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    <div class="buttonWrapper">
-      <a class="button" href="#">Поиск гостиниц в Седоне</a>
-    </div>
-  </div>
-
-  <div class="offer subscribe">
-    <h2 class="offerSedona">Подпишитесь на рассылку</h2>
-    <p class="offerTitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-    <form>
-      <input class="input" type="text" value="Ваш e-mail">
-      <input class="submit button" type="submit" value="Подписаться">
-    </form>
-  </div>
-
   <footer>
-    <div class="socialWrapper">
+    <section class="socialWrapper">
       <a class="vk" href="#"><img src="img/vk_icon.svg" alt="Вконтакте"></a>
       <a class="tg" href="#"><img src="img/telegram_icon.svg" alt="Телеграм"></a>
       <a class="yt" href="#"><img src="img/youtube_icon.svg" alt="Youtube"></a>
-    </div>
+    </section>
 
     <a class="tel" href="tel:+78128121212">+7(812) 812-12-12</a>
 
-    <div class="company">
+    <section class="company">
       <a href="#"><img src="img/company_icon.svg" alt="HTML Academy"></a>
-    </div>
+    </section>
   </footer>
 </body>
 
