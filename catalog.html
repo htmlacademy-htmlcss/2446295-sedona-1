@@ -53,58 +53,187 @@
           </div>
         </div>
       </div>
-      <div class="filter">
-        <div class="infra">
-          <span>Инфраструктура:</span>
-          <ul class="controlInfra">
-            <li>
-              <input class="infraImput" type="checkbox" name="Бассейн" checked>
-              Бассейн
-            </li>
-            <li>
-              <input class="infraImput" type="checkbox" name="Парковка" checked>
-              Парковка
-            </li>
-            <li>
-              <input class="infraImput" type="checkbox" name="Wi-Fi">
-              Wi-Fi
-            </li>
-          </ul>
-        </div>
-        <div class="typeHouse">
-          <span>Тип жилья:</span>
-          <ul class="controlTypeHouse">
-            <li>
-              <input class="typeHouseImput" type="radio" name="Гостиница" checked>
-              Гостиница
-            </li>
-            <li>
-              <input class="typeHouseImput" type="radio" name="Мотель">
-              Мотель
-            </li>
-            <li>
-              <input class="typeHouseImput" type="radio" name="Апартаменты">
-              Апартаменты
-            </li>
-          </ul>
-        </div>
-        <div class="priceWrapper">
-          <span>Стоимость,₽:</span>
-          <div class="rangeInput">
-            <input class="fromInput" type="number" value="0" placeholder="от">
-            <input class="toInput" type="number" value="9000" placeholder="до">
-            <div class="sliderWrapper">
-              <img class="sliderFrom" src="img/slider.png" alt="Ползунок цены от">
-              <img class="sliderLineActive" src="img/slider_line_active.png" alt="Выбранный диапазон цен">
-              <img class="sliderLine" src="img/slider_line_full.png" alt="Диапазон цен">
-              <img class="sliderTo" src="img/slider.png" alt="Ползунок цены до">
+        <form class="filter" action="#" method="get">
+          <div class="left">
+            <fieldset class="infra">
+              <legend>Инфраструктура:</legend>
+              <ul class="controlInfra">
+                <li>
+                  <label>
+                    <input class="infraImput" type="checkbox" name="Бассейн" checked>
+                    Бассейн
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="infraImput" type="checkbox" name="Парковка" checked>
+                    Парковка
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="infraImput" type="checkbox" name="Wi-Fi">
+                    Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="typeHouse">
+              <legend>Тип жилья:</legend>
+              <ul class="controlTypeHouse">
+                <li>
+                  <label>
+                    <input class="typeHouseImput" type="radio" name="typeHouse" value="hotel" checked>
+                    Гостиница
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="typeHouseImput" type="radio" name="typeHouse" value="motel">
+                    Мотель
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="typeHouseImput" type="radio" name="typeHouse" value="apartments">
+                    Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="right">
+            <div class="price">
+              <span>Стоимость,₽:</span>
+              <div class="range">
+                <div class="randeInput">
+                  <input type="number" value="0" placeholder="от">
+                  <input type="number" value="9000" placeholder="до">
+                </div>
+                <div class="slider">
+                  <button class="sliderFrom" src="img/slider.png" alt="Ползунок цены от"></button>
+                  <span class="sliderLineActive" src="img/slider_line_active.png" alt="Выбранный диапазон цен"></span>
+                  <span class="sliderLine" src="img/slider_line_full.png" alt="Диапазон цен"></span>
+                  <button class="sliderTo" src="img/slider.png" alt="Ползунок цены до"></button>
+                </div>
+              </div>
+            </div>
+            <div class="filterButtonWrapper">
+              <button type="submit" class="button buttonApply" href="#">Применить</button>
+              <button type="reset" class="button buttonReset" href="#">Сбросить</button>
             </div>
           </div>
+        </form>
+    </section>
+    <section>
+      <div class="sort">
+        <div class="sortText">
+          <p>Найдено гостиниц:</p>
+          <span>38</span>
         </div>
-        <div class="filterButtonWrapper">
-          <a class="button buttonApply" href="#">Применить</a>
-          <a class="button buttonReset" href="#">Сбросить</a>
+        <div class="sortVariant">
+          <select>
+            <option selected>Сначала дешевые</option>
+            <option>Сначала дорогие</option>
+            <option>С высоким рейтингом</option>
+          </select>
+          <div class="imgSort">
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
         </div>
+      </div>
+      <ul class="catalog">
+        <li class="card">
+          <a href="#">
+            <img src="img/hotel_1.jpg" alt="Картинка отеля">
+            <h3>Amara Resort & Spa</h3>
+          </a>
+          <div class="textCatr">
+            <span>Гостиница</span>
+            <span>От 4000 ₽</span>
+          </div>
+          <div class="buttonCard">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button">В избранное</button>
+          </div>
+          <div class="ratingWrapper">
+            <div class="star">
+              <p>****</p>
+              <span>Рейтинг:8,5</span>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <a href="#">
+            <img src="img/hotel_2.jpg" alt="Картинка отеля">
+            <h3>Villas at Poco Diablo</h3>
+          </a>
+          <div class="textCatr">
+            <span>Гостиница</span>
+            <span>От 5000 ₽</span>
+          </div>
+          <div class="buttonCard">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button">В избранном</button>
+          </div>
+          <div class="ratingWrapper">
+            <div class="star">
+              <p>****</p>
+              <span>Рейтинг:9,2</span>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <a href="#">
+            <img src="img/hotel_3.jpg" alt="Картинка отеля">
+            <h3>Desert Quail Inn</h3>
+          </a>
+          <div class="textCatr">
+            <span>Гостиница</span>
+            <span>От 2500 ₽</span>
+          </div>
+          <div class="buttonCard">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button">В избранное</button>
+          </div>
+          <div class="ratingWrapper">
+            <div class="star">
+              <p>***</p>
+              <span>Рейтинг:6,9</span>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <a href="#">
+            <img src="img/hotel_4.jpg" alt="Картинка отеля">
+            <h3>GreenTree Inn</h3>
+          </a>
+          <div class="textCatr">
+            <span>Гостиница</span>
+            <span>От 1500 ₽</span>
+          </div>
+          <div class="buttonCard">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button">В избранное</button>
+          </div>
+          <div class="ratingWrapper">
+            <div class="star">
+              <p>**</p>
+              <span>Рейтинг:5,0</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <span class="line">-------</span>
+      <div class="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <span>...</span>
+        <a href="#">10</a>
       </div>
     </section>
 

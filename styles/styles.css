@@ -162,12 +162,13 @@ main {
   width: 1200px;
   height: 485px;
   justify-content: center;
+  align-items: center;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: -1;
+    bottom: -1px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -176,9 +177,9 @@ main {
 }
 
 .offerWrapper {
-  margin: 50px 370px 80px 370px ;
   width: 460px;
   height: 350px;
+  margin-bottom: 42px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,8 +211,8 @@ main {
 .offer{
   display: flex;
   width: 1200px;
+  min-height: 261px;
   flex-direction: column;
-  padding: 70px 0 70px 0;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -318,6 +319,7 @@ main {
 }
 
 .actionOffer {
+  min-height: 215px;
   padding: 0;
   margin-bottom: 64px;
   gap: 20px;
@@ -345,6 +347,21 @@ main {
   align-items: center;
   gap: 30px;
 }
+
+.advantages h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages p {
+color: rgba(51, 51, 51, 1);
+font-size: 18px;
+line-height: 21px;
+font-weight: 400;
+}
+
 .advantages p, h3 {
   margin: 0;
 }
@@ -378,8 +395,8 @@ main {
 }
 /*--Подпишитесь на рассылку--*/
 .subscribe {
-  background: url("/img/background_img_subscribe.jpg") no-repeat center;
-  padding: 96px 258px 104px 258px;
+  background: rgb(164, 213, 243) url("/img/background_img_subscribe.jpg") no-repeat center;
+  min-height: 415px;
 }
 
 .subscribeWrapper {
@@ -423,7 +440,7 @@ input::placeholder {
 }
 
 .submit {
-  background-color: rgba(130, 179, 211, 1);
+  background: rgba(130, 179, 211, 1);
   width: 230px;
   min-height: inherit;
   border-radius: 0 4px 4px 0;
@@ -432,7 +449,6 @@ input::placeholder {
 
 input[type="submit"] {
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
 }
 
@@ -503,7 +519,6 @@ footer {
   width: 1200px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
   padding: 35px 70px 70px 70px;
   background: rgba(164, 213, 243, 1) url(/img/background_catalog_img.jpg) no-repeat;
   color: rgba(255, 255, 255, 1);
@@ -546,6 +561,7 @@ footer {
 /*--Подпишитесь на рассылку--*/
 .catalogPage {
   background: rgba(255, 255, 255, 1);
+  min-height: 415px;
 }
 
 .catalogPage .offerSedona {
@@ -558,4 +574,72 @@ footer {
 
 .catalogPage input[type="email"] {
   background-color: rgba(242, 242, 242, 1);
+}
+
+.sort {
+  width: 1200px;
+  min-height: 412px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-self:stretch
+}
+
+.filter fieldset {
+  display: flex;
+  align-items: flex-start;
+  border: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.filter ul {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+.filter label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.filter .left input {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+
+.left {
+  display: flex;
+  gap: 70px;
+}
+
+.right {
+  display: flex;
+  gap: 70px;
+}
+
+.right input {
+  width: 143px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
