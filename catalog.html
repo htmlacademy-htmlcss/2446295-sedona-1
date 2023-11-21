@@ -18,17 +18,17 @@
     <ul class="menu">
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">О Седоне</a></li>
-      <li class="active"><a href="catalog.html">Гостиницы</a></li>
+      <li class="active"><a href="catalog.html">Гостиницы</a><p class="catalogLine"></p></li>
     </ul>
 
-    <div class="menuElements">
+    <div class="menuItems">
       <div class="buttonSearch">
-        <img class="search" src="img/icon_search.png" alt="Поиск">
+        <img class="search" src="img/icon_search.svg" alt="Поиск">
        </div>
 
-      <div class="likeWrapper">
+      <div class="like">
          <div class="likeButtonWrapper">
-            <img class="likeButton" src="img/icon_heart.png" alt="Нравится">
+            <img class="likeButton" src="img/icon_heart.svg" alt="Нравится">
             <span class="likeCounter">12</span>
         </div>
       </div>
@@ -43,15 +43,14 @@
     <section class="filterWrapper">
       <div class="filterHeader">
         <h1>Гостиницы Седоны</h1>
-        <div class="breadcrubs">
-          <div class="breadcrubsHomeIcon">
+        <ul class="breadcrubs">
+          <li class="breadcrubsHomeIcon">
             <img class="homeCatalogIcon" src="img/home_catalog_icon.svg" alt="переход на главную страница">
-          </div>
-          <div class="breadcrubsArrowIcon">
-            <img class="arrowCatalogIcon" src="img/arrow_icon.svg" alt="Текущая страница:">
+          </li>
+          <li class="breadcrubsItem">
             <span>Гостиницы</span>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
         <form class="filter" action="#" method="get">
           <div class="left">
@@ -106,27 +105,28 @@
             <div class="price">
               <span>Стоимость,₽:</span>
               <div class="range">
-                <div class="randeInput">
-                  <input type="number" value="0" placeholder="от">
-                  <input type="number" value="9000" placeholder="до">
+                <div class="rangeInput">
+                  <input type="number" value="0"><span class="ftomInInput">От</span>
+                  <input type="number" value="9000"><span class="toInInput">До</span>
                 </div>
                 <div class="slider">
-                  <button class="sliderFrom" src="img/slider.png" alt="Ползунок цены от"></button>
-                  <span class="sliderLineActive" src="img/slider_line_active.png" alt="Выбранный диапазон цен"></span>
-                  <span class="sliderLine" src="img/slider_line_full.png" alt="Диапазон цен"></span>
-                  <button class="sliderTo" src="img/slider.png" alt="Ползунок цены до"></button>
+                  <button type="button" class="sliderButton from"></button>
+                  <span class="sliderLine sliderActive"></span>
+                  <span class="sliderLine sliderInActiv"></span>
+                  <button type="button" class="sliderButton to"></button>
                 </div>
               </div>
             </div>
             <div class="filterButtonWrapper">
-              <button type="submit" class="button buttonApply" href="#">Применить</button>
-              <button type="reset" class="button buttonReset" href="#">Сбросить</button>
+              <button type="submit" class="button buttonApply">Применить</button>
+              <button type="reset" class="button buttonReset">Сбросить</button>
             </div>
           </div>
         </form>
     </section>
-    <section>
+    <section class="hotelItems">
       <div class="sort">
+        <h2 class="visuallyHidden">Лучшие гостиницы в Седоне</h2>
         <div class="sortText">
           <p>Найдено гостиниц:</p>
           <span>38</span>
@@ -138,16 +138,16 @@
             <option>С высоким рейтингом</option>
           </select>
           <div class="imgSort">
-            <button></button>
-            <button></button>
-            <button></button>
+            <button class="variantTitle selected" type="button"><img src="img/variant_title.svg" alt="Вид сортировки карточки отелей"></button>
+            <button class="variantSlideshow" type="button"><img src="img/variant_slideshow.svg" alt="Крупный список карточек отелей"></button>
+            <button class="variantList" type="button"><img src="img/variant_list.svg" alt="Обычный список отелей"></button>
           </div>
         </div>
       </div>
       <ul class="catalog">
         <li class="card">
-          <a href="#">
-            <img src="img/hotel_1.jpg" alt="Картинка отеля">
+          <a class="imageLink" href="#">
+            <img class="imgHotel" src="img/hotel_1.jpg" alt="Картинка отеля">
             <h3>Amara Resort & Spa</h3>
           </a>
           <div class="textCatr">
@@ -156,18 +156,18 @@
           </div>
           <div class="buttonCard">
             <a class="button" href="#">Подробнее</a>
-            <button class="button">В избранное</button>
+            <button type="button">В избранное</button>
           </div>
-          <div class="ratingWrapper">
+          <div class="rating">
             <div class="star">
-              <p>****</p>
-              <span>Рейтинг:8,5</span>
+              <p>★ ★ ★ ★</p>
             </div>
+            <span>Рейтинг: 8,5</span>
           </div>
         </li>
         <li class="card">
-          <a href="#">
-            <img src="img/hotel_2.jpg" alt="Картинка отеля">
+          <a class="imageLink" href="#">
+            <img class="imgHotel" src="img/hotel_2.jpg" alt="Картинка отеля">
             <h3>Villas at Poco Diablo</h3>
           </a>
           <div class="textCatr">
@@ -176,18 +176,18 @@
           </div>
           <div class="buttonCard">
             <a class="button" href="#">Подробнее</a>
-            <button class="button">В избранном</button>
+            <button class="favorit" type="button">В избранном</button>
           </div>
-          <div class="ratingWrapper">
+          <div class="rating">
             <div class="star">
-              <p>****</p>
-              <span>Рейтинг:9,2</span>
+              <p>★ ★ ★ ★</p>
             </div>
+              <span>Рейтинг: 9,2</span>
           </div>
         </li>
         <li class="card">
-          <a href="#">
-            <img src="img/hotel_3.jpg" alt="Картинка отеля">
+          <a class="imageLink" href="#">
+            <img class="imgHotel" src="img/hotel_3.jpg" alt="Картинка отеля">
             <h3>Desert Quail Inn</h3>
           </a>
           <div class="textCatr">
@@ -196,18 +196,18 @@
           </div>
           <div class="buttonCard">
             <a class="button" href="#">Подробнее</a>
-            <button class="button">В избранное</button>
+            <button type="button">В избранное</button>
           </div>
-          <div class="ratingWrapper">
+          <div class="rating">
             <div class="star">
-              <p>***</p>
-              <span>Рейтинг:6,9</span>
+              <p>★ ★ ★</p>
             </div>
+            <span>Рейтинг: 6,9</span>
           </div>
         </li>
         <li class="card">
-          <a href="#">
-            <img src="img/hotel_4.jpg" alt="Картинка отеля">
+          <a class="imageLink" href="#">
+            <img class="imgHotel" src="img/hotel_4.jpg" alt="Картинка отеля">
             <h3>GreenTree Inn</h3>
           </a>
           <div class="textCatr">
@@ -216,24 +216,26 @@
           </div>
           <div class="buttonCard">
             <a class="button" href="#">Подробнее</a>
-            <button class="button">В избранное</button>
+            <button type="button">В избранное</button>
           </div>
-          <div class="ratingWrapper">
+          <div class="rating">
             <div class="star">
-              <p>**</p>
-              <span>Рейтинг:5,0</span>
+              <p>★ ★</p>
             </div>
+            <span>Рейтинг: 5,0</span>
           </div>
         </li>
       </ul>
-      <span class="line">-------</span>
+      <p class="line"> </p>
       <div class="pagination">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <span>...</span>
-        <a href="#">10</a>
+        <ul>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><span>...</span></li>
+          <li><a href="#">10</a></li>
+        </ul>
       </div>
     </section>
 
@@ -243,7 +245,7 @@
         <p class="offerTitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form>
           <input class="input" type="email" placeholder="Ваш e-mail">
-          <input class="submit button" type="submit" value="Подписаться">
+          <button class="submit button" type="submit">Подписаться</button>
         </form>
       </div>
     </section>
