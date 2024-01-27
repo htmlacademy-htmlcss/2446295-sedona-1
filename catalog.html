@@ -9,13 +9,11 @@
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <!--Тело сайта-->
-<body>
+<body class="body">
   <!--Шапка-->
   <header class="header">
     <!--Логотип-->
-    <div class="logoWrapper">
-      <img class="logo" src="img/logo.svg" alt="Логотип Седона">
-    </div>
+    <a class="logo" href="index.html"><img class="logoIcon" src="img/logo.svg" alt="Логотип Седона" width="140" height="70"></a>
     <!--Навигация-->
     <ul class="menu">
       <li><a class="menuLink" href="index.html">Главная</a></li>
@@ -24,16 +22,12 @@
     </ul>
     <!--Кастомное меню-->
     <div class="menuItems">
-      <div class="buttonSearch">
-        <div class="search"></div>
-       </div>
+      <a class="search" href="#"></a>
 
-      <div class="like">
-         <div class="likeButtonWrapper">
-            <div class="likeButton"></div>
-            <span class="likeCounter">12</span>
-        </div>
-      </div>
+      <a class="like" href="#">
+        <span class="likeCounter">12</span>
+      </a>
+
 
       <div class="buttonWrapper">
         <a class="button buttonBrown" href="#">Хочу сюда!</a>
@@ -49,7 +43,7 @@
         <!--Хлебные крошки-->
         <ul class="breadcrubs">
           <li>
-            <div class="homeCatalogIcon"></div>
+            <a class="homeCatalogIcon" href="index.html"></a>
           </li>
           <li class="breadcrubsItem">
             <span class="breadcrubsLink">Гостиницы</span>
@@ -116,7 +110,7 @@
           <!--Фильтр цен-->
           <div class="right">
             <div class="price">
-              <span>Стоимость,₽:</span>
+              <span>Стоимость, ₽:</span>
               <div class="range">
                 <div class="rangeInput">
                   <div class="fromInput"><input class="inputPrice" name="mimPrice" type="number" value="0" min="0" max="1000000"></div>
@@ -137,11 +131,13 @@
           </div>
         </form>
     </section>
+    <!--Сортировка-->
     <section class="hotelItems">
       <div class="sort">
         <h2 class="visuallyHidden">Лучшие гостиницы в Седоне</h2>
         <p class="sortText">Найдено гостиниц: <span>38</span></p>
         <div class="sortVariant">
+          <!--Выпадающий список-->
           <select>
             <option selected>Сначала дешевые</option>
             <option>Сначала дорогие</option>
@@ -149,9 +145,9 @@
           </select>
           <!--Вид списка-->
           <div class="imgSort">
-            <button class="variantTitle selected" type="button"><img src="img/variant_title.svg" alt="Вид сортировки карточки отелей"></button>
-            <button class="variantSlideshow" type="button"><img src="img/variant_slideshow.svg" alt="Крупный список карточек отелей"></button>
-            <button class="variantList" type="button"><img src="img/variant_list.svg" alt="Обычный список отелей"></button>
+            <button class="variantTitle selected" type="button" aria-label="Вид сортировки карточки отелей"></button>
+            <button class="variantSlideshow" type="button" aria-label="Крупный список карточек отелей"></button>
+            <button class="variantList" type="button"aria-label="Обычный список отелей"></button>
           </div>
         </div>
       </div>
@@ -160,7 +156,7 @@
       <ul class="catalog">
         <li class="card">
           <a class="imageLink" href="#">
-            <img class="imgHotel" src="img/hotel_1.jpg" alt="Картинка отеля">
+            <img class="imgHotel" src="./img/hotel_1.jpg" alt="Картинка отеля" width="300" height="212">
             <h3>Amara Resort & Spa</h3>
           </a>
 
@@ -175,14 +171,14 @@
           </div>
 
           <div class="rating">
-            <div class="star"></div>
+            <div class="star starFour"></div>
             <span>Рейтинг: 8,5</span>
           </div>
         </li>
 
         <li class="card">
           <a class="imageLink" href="#">
-            <img class="imgHotel" src="img/hotel_2.jpg" alt="Картинка отеля">
+            <img class="imgHotel" src="./img/hotel_2.jpg" alt="Картинка отеля" width="300" height="212">
             <h3>Villas at Poco Diablo</h3>
           </a>
 
@@ -197,14 +193,14 @@
           </div>
 
           <div class="rating">
-            <div class="star"></div>
+            <div class="star starFour"></div>
               <span>Рейтинг: 9,2</span>
           </div>
         </li>
 
         <li class="card">
           <a class="imageLink" href="#">
-            <img class="imgHotel" src="img/hotel_3.jpg" alt="Картинка отеля">
+            <img class="imgHotel" src="./img/hotel_3.jpg" alt="Картинка отеля" width="300" height="212">
             <h3>Desert Quail Inn</h3>
           </a>
 
@@ -219,14 +215,14 @@
           </div>
 
           <div class="rating">
-            <div class="star"></div>
+            <div class="star starThree"></div>
             <span>Рейтинг: 6,9</span>
           </div>
         </li>
 
         <li class="card">
           <a class="imageLink" href="#">
-            <img class="imgHotel" src="img/hotel_4.jpg" alt="Картинка отеля">
+            <img class="imgHotel" src="./img/hotel_4.jpg" alt="Картинка отеля" width="300" height="212">
             <h3>GreenTree Inn</h3>
           </a>
 
@@ -241,23 +237,22 @@
           </div>
 
           <div class="rating">
-            <div class="star"></div>
+            <div class="star starOne"></div>
             <span>Рейтинг: 5,0</span>
           </div>
         </li>
       </ul>
 
-      <p class="line"> </p>
       <!--Пагинация-->
       <div class="pagination">
-        <ul>
+        <ol>
           <li class="paginationItem"><a href="#">1</a></li>
           <li class="paginationItem"><a href="#">2</a></li>
           <li class="paginationItem"><a href="#">3</a></li>
           <li class="paginationItem"><a href="#">4</a></li>
-          <li class="paginationItem"><span>...</span></li>
+          <li class="paginationItem">...</li>
           <li class="paginationItem"><a href="#">10</a></li>
-        </ul>
+        </ol>
       </div>
     </section>
 
