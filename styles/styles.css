@@ -132,6 +132,7 @@
   border-bottom: 2px solid rgba(117, 98, 87, 1);
 }
 
+
 /* Кастомное меню */
 
 .menu_items {
@@ -148,12 +149,28 @@
   margin-right: 20px;
 }
 
+.search:hover {
+  opacity: 0.6;
+}
+
+.search:active {
+  opacity: 0.3;
+}
+
 .like {
   padding: 22px 12px;
   position: relative;
   cursor: pointer;
   background: url("./../img/icon_heart.svg") no-repeat center;
   margin-right: 10px;
+}
+
+.like:hover {
+  opacity: 0.6;
+}
+
+.like:active {
+  opacity: 0.3;
 }
 
 .like_counter{
