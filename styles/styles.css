@@ -88,7 +88,7 @@
 
 /* Меню */
 
-.menu {
+.header_nav {
   display: flex;
   justify-content: flex-start;
   list-style: none;
@@ -100,7 +100,7 @@
   flex-wrap: wrap;
 }
 
-.menu li {
+.header_nav li {
   display: flex;
   font-size: 20px;
   font-weight: 700;
