@@ -117,6 +117,16 @@
   min-height: 65px;
 }
 
+.menu_link:hover, .menu_link:focus {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.menu_link:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+
+
 .menu .active {
   border-top: 2px solid rgba(255, 255, 255, 1);
   border-bottom: 2px solid rgba(117, 98, 87, 1);
@@ -278,6 +288,20 @@
   font-weight: 700;
   font-family: 'PT Sans', 'Arial', sans-serif;
   text-transform: uppercase;
+  position: relative;
+  margin-bottom: 31px;
+}
+
+.card_list_white h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .list li:nth-child(even) {
@@ -302,18 +326,17 @@
   color: rgba(255, 255, 255, 1);
 }
 
-
-.card_list hr {
+.list li:first-child h3::before,
+.list li:last-child h3::after {
+  content: "";
+  display: block;
   width: 60px;
-  border-color: rgba(0, 0, 0, 0.3);
-  margin-block-start: 0;
-  margin-block-end: 0;
-  border-style: solid;
-  border-width: 1px;
-}
-
-.list li:nth-child(4n+1) hr {
-  border-color: rgba(255, 255, 255, 0.3);
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .with_pictures {
