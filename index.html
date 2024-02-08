@@ -6,7 +6,8 @@
   <title>Sedona</title>
   <meta name="description" content="Седона - место сказочной красоты"/>
   <meta name="keywords" content="Седона, sedona, путешевствия, каньон" />
-  <link rel="icon" href="./img/favicon.ico"/>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <!--Тело сайта-->
@@ -16,11 +17,13 @@
     <!--Логотип-->
     <a class="logo" href="index.html"><img class="logo_icon" src="img/logo.svg" alt="Логотип Седона" width="140" height="70"></a>
     <!--Навигация-->
-    <ul class="header_nav">
-      <li><a class="menu_link active" href="index.html">Главная</a></li>
-      <li><a class="menu_link" href="#">О Седоне</a></li>
-      <li><a class="menu_link" href="catalog.html">Гостиницы</a></li>
-    </ul>
+    <nav>
+      <ul class="menu">
+        <li><a class="menu_link active" href="index.html">Главная</a></li>
+        <li><a class="menu_link" href="#">О Седоне</a></li>
+        <li><a class="menu_link" href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
     <!--Кастомное меню-->
     <div class="menu_items">
       <a class="search" href="#"></a>
@@ -54,15 +57,15 @@
       <h2 class="visually_hidden">Живописные места с малым количеством туристов!</h2>
       <!--Преимущества-->
       <ul class="list">
-        <li class="with_pictures">
-          <div class="card_list card_list_blue">
+        <li class="card_list_item with_pictures">
+          <div class="card_list">
             <h3>Настоящий<br>городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <img class="sedona_img" src="./img/background_img_sedona.jpg" alt="Вид на седону" width="800" height="385">
         </li>
 
-        <li class="card_list_white">
+        <li class="card_list_item ">
           <div class="card_list">
             <h3>
               Небольшая<br>
@@ -72,7 +75,7 @@
           </div>
         </li>
 
-        <li class="card_list_white">
+        <li class="card_list_item ">
           <div class="card_list">
             <h3>
               Красивая<br>
@@ -82,7 +85,7 @@
           </div>
         </li>
 
-        <li class="card_list_white">
+        <li class="card_list_item">
           <div class="card_list">
             <h3>
               Мало<br>
@@ -92,9 +95,9 @@
           </div>
         </li>
 
-        <li class="with_pictures">
+        <li class="card_list_item with_pictures">
           <img src="./img/background_img_canyon.jpg" alt="Вид на каньоны" width="800" height="385">
-          <div class="card_list card_list_blue">
+          <div class="card_list">
             <h3>
               Там есть<br>
               мост дьявола
@@ -158,7 +161,7 @@
   </main>
 
   <!--Подвал-->
-  <footer>
+  <footer class="footer">
     <!--Контакты-->
     <section class="contacts">
         <h2 class="visually_hidden">Контакты</h2>
@@ -245,13 +248,13 @@
                 Взрослые:
                 <span class="wrapper_number">
                   <span class="button_number button_client_minus" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" role="img" aria-label="Меньше">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 2" role="img" aria-label="Меньше">
                       <path d="M0 0L0 2L14 2V0L0 0Z" />
                     </svg>
                   </span>
 
                   <span class="button_number button_client_plus" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" role="img" aria-label="Больше">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 14" role="img" aria-label="Больше">
                       <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                     </svg>
                   </span>
@@ -275,13 +278,13 @@
 
               <span class="wrapper_number">
                 <span class="button_number button_client_minus" tabindex="0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" role="img" aria-label="Меньше">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 2" role="img" aria-label="Меньше">
                     <path d="M0 0L0 2L14 2V0L0 0Z" />
                   </svg>
                 </span>
 
                 <span class="button_number button_client_plus" tabindex="0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" role="img" aria-label="Больше">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 14" role="img" aria-label="Больше">
                     <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                   </svg>
                 </span>
