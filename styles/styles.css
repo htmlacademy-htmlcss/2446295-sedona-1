@@ -620,6 +620,11 @@ input[type="email"] {
 }
 
 /* Телефон*/
+.phone_wrapper {
+  max-width: 420px;
+  flex-wrap: wrap;
+}
+
 .phone {
   max-width: 420px;
   font-size: 40px;
@@ -644,6 +649,11 @@ input[type="email"] {
 }
 
 /* Логотип Академии */
+.academy_logo_wrapper {
+  max-width: 200px;
+  flex-wrap: wrap;
+}
+
 .academy_logo {
   fill: #000000;
   display: flex;
