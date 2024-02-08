@@ -88,7 +88,7 @@
 
 /* Меню */
 
-.header_nav {
+.menu {
   display: flex;
   justify-content: flex-start;
   list-style: none;
@@ -100,7 +100,7 @@
   flex-wrap: wrap;
 }
 
-.header_nav li {
+.menu li {
   display: flex;
   font-size: 20px;
   font-weight: 700;
@@ -296,6 +296,7 @@
 .list li {
   display: flex;
   height: 385px;
+  position: relative;
 }
 
 .list h3 {
@@ -306,19 +307,7 @@
   font-family: 'PT Sans', 'Arial', sans-serif;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 31px;
-}
-
-.card_list_white h3::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  bottom: -32px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 0 31px 0;
 }
 
 .list li:nth-child(even) {
@@ -334,7 +323,7 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.list li:first-child h3, .list li:last-child h3 {
+.card_list_items h3 {
   padding: 0;
 }
 
@@ -343,21 +332,29 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.list li:first-child h3::before,
-.list li:last-child h3::after {
+.card_list_item h3::after {
   content: "";
   display: block;
   width: 60px;
   height: 2px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   bottom: -32px;
   left: 50%;
   transform: translateX(-50%);
 }
 
+.card_list_item:first-child h3::after,
+.card_list_item:last-child h3::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .with_pictures {
   width: 1200px;
+}
+
+.with_pictures h3 {
+  padding: 0;
 }
 
 .card_list {
@@ -417,7 +414,8 @@
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 10px; /* добавим отступ после заголовка */
+  margin: 0 0 10px 0;
+
 }
 
 .advantages p {
@@ -425,10 +423,6 @@
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  margin: 0;
-}
-
-.advantages p, h3 {
   margin: 0;
 }
 
@@ -569,7 +563,7 @@ input[type="email"] {
 }
 
 /* Подвал */
-footer {
+.footer {
   display: flex;
   width: 1200px;
   min-height: 120px;
@@ -786,7 +780,7 @@ footer {
   margin: 0;
 }
 
-.filter li:last-child .control{
+.control_item:last-child .control{
   margin-bottom: 0;
 }
 
@@ -860,7 +854,7 @@ footer {
   opacity: 0.6;
 }
 
-.filter .left input {
+.left input {
   height: 20px;
   width: 20px;
 }
@@ -1167,6 +1161,7 @@ input[type=number] {
 }
 
 .image_link h3 {
+  margin: 0;
   font-size: 24px;
   color: rgba(0, 0, 0, 1);
   line-height: 28px;
@@ -1519,20 +1514,31 @@ input[type=number] {
 
 .number_input[type="number"] {
   padding: 14px 50px;
-  margin-left: 46px;
 }
 
 .wrapper_number {
   position: relative;
+  margin-left: 46px;
 }
 
 .button_number {
   position: absolute;
+  z-index: 1;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 19px;
   fill: rgba(117, 97, 87, 0.3);
+  cursor: pointer;
+}
 
+.button_client_plus {
+  top: 15px;
+  right: 10px;
+}
+
+.button_client_minus {
+  top: 15px;
+  left: 10px;
 }
 
 .button_number:hover svg{
@@ -1550,18 +1556,14 @@ input[type=number] {
 
 .button_client_plus svg {
   position: absolute;
-  left: 132px;
-  top: 16px;
-  z-index: 1;
   cursor: pointer;
+  right: 2px;
 }
 
 .button_client_minus svg {
   position: absolute;
-  left: 56px;
-  top: 24px;
-  z-index: 1;
   cursor: pointer;
+  right: 2px;
 }
 
 .tooltip {

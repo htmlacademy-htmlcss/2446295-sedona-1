@@ -6,7 +6,7 @@
   <title>Sedona</title>
   <meta name="description" content="Каталог отелей"/>
 	<meta name="keywords" content="Отели, отель, Седона, отдых"/>
-  <link rel="icon" href="./img/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png"/>
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <!--Тело сайта-->
@@ -16,11 +16,13 @@
     <!--Логотип-->
     <a class="logo" href="index.html"><img class="logo_icon" src="./img/logo.svg" alt="Логотип Седона" width="140" height="70"></a>
     <!--Навигация-->
-    <ul class="header_nav">
-      <li><a class="menu_link" href="index.html">Главная</a></li>
-      <li><a class="menu_link" href="#">О Седоне</a></li>
-      <li><a class="menu_link active" href="catalog.html">Гостиницы</a></li>
-    </ul>
+    <nav>
+      <ul class="menu">
+        <li><a class="menu_link" href="index.html">Главная</a></li>
+        <li><a class="menu_link" href="#">О Седоне</a></li>
+        <li><a class="menu_link active" href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
     <!--Кастомное меню-->
     <div class="menu_items">
       <a class="search" href="#" aria-label="Искать"></a>
@@ -57,21 +59,21 @@
           <fieldset class="infra">
             <legend>Инфраструктура:</legend>
             <ul class="control_infra">
-              <li>
+              <li class="control_item">
                 <label class="control">
                   <input class="infra_input visually_hidden" type="checkbox" name="Бассейн" checked>
                   <span class="input_checkbox"></span>
                   <span class="text_checkbox">Бассейн</span>
                 </label>
               </li>
-              <li>
+              <li class="control_item">
                 <label class="control">
                   <input class="infra_input visually_hidden" type="checkbox" name="Парковка" checked>
                   <span class="input_checkbox"></span>
                   <span>Парковка</span>
                 </label>
               </li>
-              <li>
+              <li class="control_item">
                 <label class="control">
                   <input class="infra_input visually_hidden" type="checkbox" name="Wi-Fi">
                   <span class="input_checkbox"></span>
@@ -83,21 +85,21 @@
           <fieldset class="type_house">
             <legend>Тип жилья:</legend>
             <ul class="control_type_house">
-              <li>
+              <li class="control_item">
                 <label class="control">
                   <input class="type_house_input visually_hidden" type="radio" name="typeHouse" value="hotel" checked>
                   <span class="input_radio"></span>
                   <span class="text_radio">Гостиница</span>
                 </label>
               </li>
-              <li>
+              <li class="control_item">
                 <label class="control">
                   <input class="type_house_input visually_hidden" type="radio" name="typeHouse" value="motel">
                   <span class="input_radio"></span>
                   <span>Мотель</span>
                 </label>
               </li>
-              <li>
+              <li class="control_item">
                 <label class="control">
                   <input class="type_house_input visually_hidden" type="radio" name="typeHouse" value="apartments">
                   <span class="input_radio"></span>
@@ -130,26 +132,25 @@
             <button type="reset" class="button button_reset">Сбросить</button>
           </div>
         </div>
-        </form>
-        </section>
-        <!--Сортировка-->
-        <section class="hotel_items">
-        <div class="sort">
-          <h2 class="visually_hidden">Лучшие гостиницы в Седоне</h2>
-          <p class="sort_text">Найдено гостиниц: <span>38</span></p>
-          <div class="sort_variant">
-            <!--Выпадающий список-->
-            <select>
-              <option selected>Сначала дешевые</option>
-              <option>Сначала дорогие</option>
-              <option>С высоким рейтингом</option>
-            </select>
-            <!--Вид списка-->
-            <div class="img_sort">
+      </form>
+    </section>
+    <!--Сортировка-->
+    <section class="hotel_items">
+      <div class="sort">
+        <h2 class="visually_hidden">Лучшие гостиницы в Седоне</h2>
+        <p class="sort_text">Найдено гостиниц: <span>38</span></p>
+        <div class="sort_variant">
+          <!--Выпадающий список-->
+          <select>
+            <option selected>Сначала дешевые</option>
+            <option>Сначала дорогие</option>
+            <option>С высоким рейтингом</option>
+          </select>
+          <!--Вид списка-->
+          <div class="img_sort">
               <button class="variant_title selected" type="button" aria-label="Вид сортировки карточки отелей"></button>
               <button class="variant_slideshow" type="button" aria-label="Крупный список карточек отелей"></button>
               <button class="variant_list" type="button" aria-label="Обычный список отелей"></button>
-            </div>
           </div>
         </div>
       </div>
@@ -272,7 +273,7 @@
   </main>
 
   <!--Подвал-->
-  <footer>
+  <footer class="footer">
     <!--Контакты-->
     <section class="contacts">
       <h2 class="visually_hidden">Контакты</h2>
